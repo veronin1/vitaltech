@@ -1,4 +1,8 @@
-# Luke Stackhouse.py
+# Vitaltech Fitness App
+# Users can enter and store their name, age, height and weight;
+# Users can enter their health metrics such as steps, water intake and heart rate;
+# The application will calculate fitness data, such as BMI. This can be a separate section of the application and is not required to be stored with other data;
+# Save the users' data into a text file.
 
 # Create empty dictionary
 people = {}
