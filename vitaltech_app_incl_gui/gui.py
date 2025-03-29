@@ -68,8 +68,26 @@ class GUI:
         self.water_entry.grid(row=2, column=1, padx=5, pady=5)
 
         # --------- Buttons --------- 
-        b1 = Button(self.root, text = "Button", background = "green", fg = "gray30")
-        b1.pack(fill = BOTH, expand = True)
+
+        # Frame to hold buttons side by side
+        button_frame = tk.Frame(self.root)
+        button_frame.pack(pady=20)
+
+        # Add Info button
+        add_info_button = tk.Button(button_frame, text="Add Info", bg="green", fg="white", width=15)
+        add_info_button.pack(side="left", padx=10)
+
+        # Calculate Metrics button
+        calculate_button = tk.Button(button_frame, text="Calculate Metrics", bg="green", fg="white", width=15)
+        calculate_button.pack(side="left", padx=10)
+
+        # --------- User Output Info  ---------
+        label_frame = tk.Frame(self.root)
+        label_frame.pack(pady=20)
+
+        # Textbox Output
+        output_textbox = tk.Text()
+
 
 def main():
     app = GUI()
