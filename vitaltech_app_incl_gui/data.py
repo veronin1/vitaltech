@@ -56,7 +56,7 @@ class UserData(Person):
     def print_to_text(self):
         filename = f"{self.name}.txt"
         with open(filename, "a") as f:
-            f.write(f"!-+-+-! {self.name} Data !-+-+-!\n")
+            f.write(f"{self.name} Data\n")
             for key, value in self.convert_to_dictionary().items():
                 f.write(f"{key}: {value}\n")
             f.write("\n")  # Add a blank line between entries
