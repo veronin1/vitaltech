@@ -30,7 +30,7 @@
   - The **Person** class encapsulates the basic user information.  
   - The **UserData** class inherits from Person and extends it by incorporating additional health metrics and methods to calculate fitness data.
   
-- **Separation of Concerns:**  
+- **Separation of Concerns:* 
   - **Data Handling:**  
     All calculations and data conversions are handled by UserData.  
   - **User Interface:**  
