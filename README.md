@@ -4,11 +4,11 @@
 
 1. **Users can enter and store their name, age, height, and weight**
    - **Implementation:**  
-     The program defines a Person class (in *person.py*) that holds the basic attributes—name, age, height, and weight. This serves as the foundation for capturing user details.
+     The program defines a Person class (in person.py) that holds the basic attributes—name, age, height, and weight. This serves as the foundation for capturing user details.
 
 2. **Users can enter their health metrics such as steps, water intake, and heart rate**
    - **Implementation:**  
-     The `UserData` class (in *data.py*) extends the `Person` class by adding attributes for health metrics including steps, heart rate, and water intake. This enables the app to capture daily health-related data.
+     The UserData class (in data.py) extends the Person class by adding attributes for health metrics including steps, heart rate, and water intake. This enables the app to capture daily health-related data.
 
 3. **The application will calculate fitness data, such as BMI**
    - **Implementation:**  
@@ -20,7 +20,7 @@
 
 4. **Save the users' data into a text file**
    - **Implementation:**  
-     The print_to_text() method in the UserData class is responsible for writing the user's data to a text file. Each file is named after the user (e.g., *Alice.txt*) and is appended with every new data entry, ensuring persistence of the user's inputs.
+     The print_to_text() method in the UserData class is responsible for writing the user's data to a text file. Each file is named after the user (e.g., *Harry.txt*) and is appended with every new data entry, ensuring persistence of the user's inputs.
 
 ---
 
