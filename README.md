@@ -1,7 +1,6 @@
 #### Vitaltech Fitness App
 
 ### Requirements and How They Are Met
-
 1. **Users can enter and store their name, age, height, and weight**
    - **Implementation:**  
      The program defines a Person class (in person.py) that holds the basic attributes—name, age, height, and weight. This serves as the foundation for capturing user details.
