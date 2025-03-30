@@ -111,7 +111,7 @@ class GUI:
         heart_rate = self.validate_input(self.heart_rate_entry.get(), int)
         water_intake = self.validate_input(self.water_entry.get(), float)
 
-        # check if any input failed validation
+        # check if any input failed validation (checking for empty space)
         if None in [name, age, height, weight, steps, heart_rate, water_intake]:
             self.output_box.delete(1.0, tk.END)
             self.output_box.insert(tk.END, "Entries are invalid")
@@ -123,10 +123,22 @@ class GUI:
         # save to file by accessing the name inside user object and the function from userData!
         self.user.print_to_text()
 
+        # open the file just made for "comparison", read its content and save contents to variable
+        try:
+            with open(f"{self.user.name}.txt") as f:
+                content = f.read()
+        except FileNotFoundError:
+                content = ""
+
+        # count how many times the header appears
+        count = content.count(f"{self.user.name} Data")
+
+        output_message = f"Info added for {self.user.name} ({count})"
+        output_message += content
+
         # show success message
         self.output_box.delete(1.0, tk.END)
-        self.output_box.insert(tk.END, f"Info added for {self.user.name}.")
-
+        self.output_box.insert(tk.END, output_message)
 
     def calculate_metrics(self):
         # checks if hte user has entered their info by checking if self.user exists
