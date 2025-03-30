@@ -1,4 +1,5 @@
 from gui import GUI
+from data import UserData
 
 def main():
     app = GUI()
