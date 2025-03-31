@@ -52,7 +52,7 @@ class GUI:
         self.age_entry.grid(row=row, column=1, padx=5, pady=5)
         row += 1
 
-        tk.Label(user_info_frame, text="Height in ft (i.e. 1.7):", bg="#f2f2f2").grid(row=row, column=0, sticky="e", padx=5, pady=5)
+        tk.Label(user_info_frame, text="Height in metres (i.e. 1.7):", bg="#f2f2f2").grid(row=row, column=0, sticky="e", padx=5, pady=5)
         self.height_entry = tk.Entry(user_info_frame, width=30)
         self.height_entry.grid(row=row, column=1, padx=5, pady=5)
         row += 1
