@@ -5,7 +5,7 @@ from data import UserData
 class GUI:
     def __init__(self):
         self.root = tk.Tk()  # Creates window
-        self.root.geometry("450x600")  # Sets window size
+        self.root.geometry("450x745")  # Sets window size
         self.root.title("Vitaltech Fitness App")  # Sets window title
         self.root.configure(bg="#f2f2f2")  # Light background
 
@@ -101,7 +101,7 @@ class GUI:
         label_frame = tk.Frame(self.root, bg="#f2f2f2")
         label_frame.pack(pady=10)
 
-        self.output_box = tk.Text(label_frame, height=7, width=50, bg="white", fg="black", relief="solid", bd=1)
+        self.output_box = tk.Text(label_frame, height=15, width=50, bg="white", fg="black", relief="solid", bd=1)
         self.output_box.pack()
 
     def add_info(self):
