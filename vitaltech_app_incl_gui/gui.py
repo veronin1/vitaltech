@@ -1,4 +1,11 @@
-from tkinter import *
+"""
+This module implements the GUI class using TKinter which demonstrates how coding standards and OOP principles are applied to create the whole interface.
+Every UI element is encapsulated within methods that handle its creation and interactions, ensuring that the codebase remains strucutred and easily navigtable.
+Like other sections of my code, I aimed for it to adhere to PEP 8 guidelines and OOP best practices, focusing on "needed" features and correct formatting. I use Ruff to find issues proactively with my code on file saving to ensure it meets these guidelines.
+The GUI class also showcases the event-driven programming paradigm because it binds user actions, such as button clicks, to corresponding event handlers which then process the input data and update the display accordingly. This modular approach allows for easier maintenance and potential future enhancements
+Furthermore, the code explicitly separates the layout construction from the actual program logic, ensuring that modifications in one area have minimal impact on the other.
+As well as this, my extensive inline documentation is designed to serve as a guide for other developers and also a way to adhere to the guideline that every aspect of code is self-explanatory.
+"""
 import tkinter as tk
 from data import UserData
 
@@ -20,11 +27,11 @@ class GUI:
             if expected_type in [int, float] and value <= 0:
                 raise ValueError
 
-            if expected_type == str and not value.strip():
+            if expected_type is str and not value.strip():
                 raise ValueError
 
             return value
-        except:
+        except ValueError:
             return None
 
 
