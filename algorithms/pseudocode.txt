@@ -1,0 +1,45 @@
+
+// FUNCTION FOR GETTING USER INPUT
+PROCEDURE GetUserInput
+    WHILE TRUE DO
+        OUTPUT "Enter name, age, height, weight, steps, heart rate, water intake"
+        INPUT all fields
+
+        IF all inputs are valid THEN
+            BREAK
+        ELSE
+            OUTPUT "Invalid input(s). Please try again."
+        END IF
+    END WHILE
+
+    RETURN name, age, height, weight, steps, heartRate, waterIntake
+END PROCEDURE
+
+// FUNCTION FOR CALCULATING BMI
+PROCEDURE CalculateBMI()
+    INPUT weight, height
+    bmi = weight / (height * height)
+
+    RETURN bmi
+END PROCEDURE
+
+// DICTIONARY FOR STORING AND PRINTING USERDATA
+DECLARE userData AS empty dictionary
+ADD bmi, name, age, weight etc to dictionary userData
+
+
+// FUNCTION FOR PRINTING TO TEXT FILE
+PROCEDURE SaveDataToFile
+    INPUT userName, userData
+
+    SET fileName = (userData[name]).txt
+    OPEN fileName in append mode
+
+    WRITE userData to file
+    CLOSE file
+
+    OUTPUT "User data saved to file."
+END PROCEDURE
+
+
+
